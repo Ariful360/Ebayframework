@@ -18,6 +18,9 @@ public class HomePage {
 
 	@FindBy(className = "gh-cart-icon")
 	WebElement cart;
+	
+	@FindBy(xpath = "//a[text()= 'Sign in']")
+	WebElement signIn;
 
 	public void clickSearchButton() throws InterruptedException {
 		searchButton.click();
@@ -26,6 +29,11 @@ public class HomePage {
 
 	public void clickCart() throws InterruptedException {
 		cart.click();
+		Thread.sleep(3000);
+	}
+	
+	public void clickSignIn() throws InterruptedException {
+		signIn.click();
 		Thread.sleep(3000);
 	}
 
